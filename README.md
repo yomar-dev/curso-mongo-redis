@@ -57,7 +57,7 @@
 `db.<collection>.findOne()` Imprime solo el primer documentos que encuentre. <br>
 
 
-### Operaciones avanzadas con find() findOne()
+### Operaciones avanzadas con find() findOne():
 
 `db.collection.find()` Imprime los primeros 20 documentos que encuentra. <br>
 `.limit(n)` Imprime los primeros n documentos que encuentra. <br>
@@ -68,6 +68,14 @@
 **$lt** Significa menor que (<). <br>
 **$gte** Significa mayor o igual a (>=). <br>
 **$lte** Significa menor o igual a (<=). <br>
+
+
+### Modificación de Documentos:
+
+`db.<collection>.save({JSON-Document)}` Modifica un campo si se encuentra en una colección, si no se agrega. <br>
+`db.<collection>.update({JSON-Document)}` Actualiza el documento por completo, es decir, elimina todos los campos y agrega los nuevos dejando así solo el **_id**. <br>
+`db.<collection>.updateOne({filtro}, {"clave": "valor"})` Se actualizará el primer documento que coincida con el filtro. <br>
+`db.<collection>.updateMany({filtro}, {"clave": "valor"})` Se actualizará todos los documentos que coincida con el filtro. <br>
 
 
 
