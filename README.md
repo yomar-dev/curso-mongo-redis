@@ -45,6 +45,12 @@
 `load('name-file.js')` Permite cargar un archivo JavaScript a **MongoDB**. <br>
 
 
+### Insertar Documentos:
+
+`db.<collection>.insert({JSON-Document})` Permite agregar una o varias colecciones a una base de datos. <br>
+`db.<collection>.insertOne({JSON-Document})` A diferencia del insert({JSON-Document}), este método solo inserta una colección. <br>
+`db.<collection>.insertMany([{JSON-Document}, {Other-JSON-Document}, {...}])` Este método es similar a `insert({JSON-Document})`, sin embargo, este método fue incluido en la versión 3 de MongoDB por ende debe comenzar a usarse y evitar `insert({JSON-Document})` <br>
+
 ### Enlaces de interes:
 
 [Coin Market Cap](https://coinmarketcap.com/) <br>
