@@ -56,6 +56,21 @@
 `db.<collection>.find()` Imprime los primeros 20 documentos que encuentre. <br>
 `db.<collection>.findOne()` Imprime solo el primer documentos que encuentre. <br>
 
+
+### Operaciones avanzadas con find() findOne()
+
+`db.collection.find()` Imprime los primeros 20 documentos que encuentra. <br>
+`.limit(n)` Imprime los primeros n documentos que encuentra. <br>
+`.pretty()` Imprime los documentos de una forma más legible. <br>
+`db.collection.find({"clave": "valor"}, {"clave": valor})` Imprime el documento que contenga la(s) clave(s) y el (o los) valor(es) especificado(s). Con `findOne({...})` se muestran los documentos de forma más legibles para la vista. <br>
+`db.collection.find({"clave": {$gt: "valor"}})` Imprime los documentos mayores al valor de alguna clave en un documento. <br>
+**$gt** Significa mayor que (>). <br>
+**$lt** Significa menor que (<). <br>
+**$gte** Significa mayor o igual a (>=). <br>
+**$lte** Significa menor o igual a (<=). <br>
+
+
+
 ### Enlaces de interes:
 
 [Coin Market Cap](https://coinmarketcap.com/) <br>
