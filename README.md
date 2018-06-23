@@ -92,6 +92,18 @@
 
 **Ejecutar el servidor de Redis:** `redis-server`
 
+> **Nota:** El puerto por defecto de Redis es *6379*.
+
+
+### Insertar y leer datos en Redis:
+
+Para insertar un primer valor en Redis se debe usar `SET` con dos parámetros, el primero la clave y el segundo el valor, ejemplo: <br>
+`SET clave valor` <br><br>
+
+Para información se bebe usar `GET` pasándo un parámetro que sería la clave, ejemplo: <br>
+`GET clave` <br><br>
+
+
 ### Enlaces de interes:
 
 [Coin Market Cap](https://coinmarketcap.com/) <br>
