@@ -77,6 +77,13 @@
 `db.<collection>.updateOne({filtro}, {"clave": "valor"})` Se actualizará el primer documento que coincida con el filtro. <br>
 `db.<collection>.updateMany({filtro}, {"clave": "valor"})` Se actualizará todos los documentos que coincida con el filtro. <br>
 
+### Eliminar Documentos:
+
+`db.<collection>.deleteOne({"filter")}` Elimina el primer documento encontrado según el filtro. <br>
+`db.<collection>.deleteMany({"filter")}` Elimina todos los documentos encontrados según el filtro. <br>
+`db.<collection>.remove({"filter")}` Elimina un campo según el filtro, es decir, si coincide uno o muchos documentos con el filtro serán eliminados de la base de datos. <br>
+`db.<collection>.drop()` Elimina todos los documentos de una colección. <br>
+
 
 
 ### Enlaces de interes:
