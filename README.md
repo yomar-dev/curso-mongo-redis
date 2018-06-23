@@ -104,6 +104,26 @@ Para información se bebe usar `GET` pasándo un parámetro que sería la clave,
 `GET clave` <br><br>
 
 
+### Eliminar registros en Redis:
+
+Para eliminar registro en Redis hay que utilizar el comando `DEL`, este comando recibe uno o más parámetros de tipo llave, puedo borrar N cantidad de claves al tiempo con el siguiente comando. <br>
+`DEL clave` <br> <br>
+
+
+### Limitación de Redis:
+
+`DEL` no permite eliminar en lote, la solución para eliminar en lote desde la consola de **Redis** es utilizando **EVAL**. <br>
+
+`EVAL "return redis.call('del', unpack(redis.call('keys', ARGV[1])))" 0 pattern*` <br>
+
+Lo importante de ese snippet de código es la última parte `pattern*` ahí indicamos que todas las llaves que comiencen con
+**pattern** serán eliminadas. <br>
+
+Ese código es muy útil para eliminar por ejemplo cache de todos los usuarios si tienes un patrón como `cache:user:<user_id>`, si deseas eliminar todos los registros debes ejecutar el código de arriba con `cache:user:*` al final.
+
+
+
+
 ### Enlaces de interes:
 
 [Coin Market Cap](https://coinmarketcap.com/) <br>
