@@ -137,7 +137,17 @@ Desde la consola de Redis ejecutamos: <br>
 
 De esta manera Redis guardará una llave con el nombre de `current-degrees-mexico-city` con una duración de 1800 segundos o 30 minutos y que contendrá el valor "18°". <br>
 
-Luego de 30 minutos la llave automáticamente se eliminará. Es recomendable que al leer la llave desde cualquier lenguaje de programación se verifique que contenga un valor ya que Redis no genera un error si la llave no existe solo devuelve un valor vacío.
+Luego de 30 minutos la llave automáticamente se eliminará. Es recomendable que al leer la llave desde cualquier lenguaje de programación se verifique que contenga un valor ya que Redis no genera un error si la llave no existe solo devuelve un valor vacío. <br><br><br>
+
+
+### Cómo eliminar una BD o todas las BD:
+
+Al usar Redis muchas veces se necesita limpiar toda la base de datos sobre todo si le indicamos a Redis que guarde mucha información en memoria, para realizar esta acción tenemos dos alternativas: **FLUSHDB** y **FLUSHALL**.
+
+**FLUSHDB:** Elimina la base de datos que se encuentra seleccionada. Por defecto Redis al iniciar la consola selecciona la base de datos número 0. Es recomendable asegurarse que se encuentra en la base de datos que desea eliminar ejecutando el comando SELECT antes de **FLUSH**. <br><br>
+
+**FLUSHALL:** A diferencia de **FLUSHDB**, **FLUSHALL** elimina **toda la información de todas las bases de datos**, no importa en que base de datos te encuentres, al ejecutar **FLUSHALL** se elimina todo. <br>
+Se recomienda evitar esta función a menos que sea dispensable la información que se encuentre registrada en la base de datos. <br><br>
 
 
 
