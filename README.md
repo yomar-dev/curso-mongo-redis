@@ -122,6 +122,25 @@ Lo importante de ese snippet de código es la última parte `pattern*` ahí indi
 Ese código es muy útil para eliminar por ejemplo cache de todos los usuarios si tienes un patrón como `cache:user:<user_id>`, si deseas eliminar todos los registros debes ejecutar el código de arriba con `cache:user:*` al final.
 
 
+### SetEx, cómo guardar un registro que tenga una fecha de vencimiento:
+
+**SETEX:** En Redis se puede guardar información con un tiempo de vencimiento, esto es útil cuando se crea una aplicación que necesite guardar información y modificarla o crearla luego de cierta cantidad de minutos. <br>
+
+Por ejemplo, una aplicación del tiempo podría guardar el histórico en base de datos del tiempo de una ciudad y guardar el tiempo actual en una llave de Redis, el clima por lo general no cambia tan rápido en segundos por lo tanto esa llave con el tiempo actual podría tener un tiempo de vencimiento de 30 minutos, luego de 30 minutos no existirá y en ese momento se puede crear de nuevo otra llave con el mismo nombre que guarde el nuevo estado del clima. <br>
+
+Para realizar esta funcionalidad Redis provee una función llamada **SETEX** la cual es muy similar a la función **SET** para guardar una llave con su valor. <br>
+
+Aplicando la función **SETEX** en el ejemplo del clima, supongamos que la temperatura en centígrados para la ciudad de México es de 18°, podemos guardar esa información en una llave llamada `current-degrees-mexico-city`. <br>
+
+Desde la consola de Redis ejecutamos: <br>
+`redis> SETEX current-degrees-mexico-city 1800 "18°"`<br>
+
+De esta manera Redis guardará una llave con el nombre de `current-degrees-mexico-city` con una duración de 1800 segundos o 30 minutos y que contendrá el valor "18°". <br>
+
+Luego de 30 minutos la llave automáticamente se eliminará. Es recomendable que al leer la llave desde cualquier lenguaje de programación se verifique que contenga un valor ya que Redis no genera un error si la llave no existe solo devuelve un valor vacío.
+
+
+
 
 
 ### Enlaces de interes:
