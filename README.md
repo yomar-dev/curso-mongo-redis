@@ -34,6 +34,17 @@
 > **Sharding:** Con las bases de datos **NoSQL** puedo tener varios servidores y en cada servidor tener una parte de la base de datos, puedo distribuir la información y eso me facilita los procesos de recuperación y puedo escalar únicamente lo que necesito y no es necesario escalar todo el cluster. En las bases de datos relacionales es complejo el proceso de distribución.
 
 
+### Comandos a tener en cuenta:
+
+`mongo --help` Muestra el menú de ayuda. <br>
+`show dbs` Muestra las bases de datos existentes en **MongoDB**. <br>
+`use [name-db]` Permite usar una base de datos determinada. <br>
+`db.<collection>.insert({JSON-Document})` Permite crear una colección (tabla en MySQL) e insertar datos en una base de datos. <br>
+`show collections` Muestra las colecciones existentes. <br>
+`db.createCollection('name-colletion')` Crea una colección de manera explicita. <br>
+`load('name-file.js')` Permite cargar un archivo JavaScript a **MongoDB**. <br>
+
+
 ### Enlaces de interes:
 
 [Coin Market Cap](https://coinmarketcap.com/) <br>
