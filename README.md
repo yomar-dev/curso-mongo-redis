@@ -51,6 +51,11 @@
 `db.<collection>.insertOne({JSON-Document})` A diferencia del insert({JSON-Document}), este método solo inserta una colección. <br>
 `db.<collection>.insertMany([{JSON-Document}, {Other-JSON-Document}, {...}])` Este método es similar a `insert({JSON-Document})`, sin embargo, este método fue incluido en la versión 3 de MongoDB por ende debe comenzar a usarse y evitar `insert({JSON-Document})` <br>
 
+### Buscar documentos:
+
+`db.<collection>.find()` Imprime los primeros 20 documentos que encuentre. <br>
+`db.<collection>.findOne()` Imprime solo el primer documentos que encuentre. <br>
+
 ### Enlaces de interes:
 
 [Coin Market Cap](https://coinmarketcap.com/) <br>
