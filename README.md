@@ -85,6 +85,12 @@
 `db.<collection>.drop()` Elimina todos los documentos de una colección. <br>
 
 
+### Instalar Redis en Mac:
+
+1 - `brew update`
+2 - `brew install redis`
+
+**Ejecutar el servidor de Redis:** `redis-server`
 
 ### Enlaces de interes:
 
